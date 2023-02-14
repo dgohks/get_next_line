@@ -6,7 +6,7 @@
 /*   By: dgoh <dgoh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 13:49:46 by dgoh              #+#    #+#             */
-/*   Updated: 2022/12/16 22:40:19 by dgoh             ###   ########.fr       */
+/*   Updated: 2023/02/14 12:12:26 by dgoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strjoin(char *str1, char *str2)
 	i = 0;
 	if (!str1)
 	{
-		str1 = (char *)malloc(1 * sizeof(char));
+		str1 = (char *)malloc(1 * sizeof(char) + 1);
 		str1[0] = '\0';
 	}
 	len = ft_strlen(str1) + ft_strlen(str2);
@@ -80,7 +80,7 @@ char	*ft_current_line(char *left_str)
 		return (NULL);
 	while (left_str[size] != '\n' && left_str[size])
 		size++;
-	str = (char *)malloc((size + 1) * sizeof(char));
+	str = (char *)malloc((size + 2) * sizeof(char));
 	if (!str)
 		return (NULL);
 	size = 0;
